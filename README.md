@@ -11,8 +11,17 @@ This joins the other half-finished repositories for this tough book that you can
 For a nice experience, add this to your emacs config:
 
 ```scheme
+  (add-hook 'racket-mode-hook #'turn-on-smartparens-strict-mode)
+
+  (add-hook 'racket-repl-mode-hook #'turn-on-smartparens-strict-mode)
+
   (global-prettify-symbols-mode 1)
   (add-hook 'racket-mode-hook
+            (lambda ()
+              "Beautify Lambdas"
+              (setq prettify-symbols-alist '(("lambda" . 955)))))
+
+  (add-hook 'racket-repl-mode-hook
             (lambda ()
               "Beautify Lambdas"
               (setq prettify-symbols-alist '(("lambda" . 955)))))
