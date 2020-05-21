@@ -1,3 +1,5 @@
+#lang sicp
+
 ;; Thus concludes chapter 1!!!
 
 ;; Exercise 1.46: write iterative-improve, redefine sqrt and fixed-point
